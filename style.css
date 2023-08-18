@@ -550,28 +550,10 @@
   margin-bottom: 1.25rem;
 }
 
-.projects__subtitle{
-  position: relative;
-  display: inline-block;
-  font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
-  color: var(--text-color);
-  margin-bottom: .75rem;
-  padding-left: 1.75rem;
-}
-
-.projects__subtitle::after{
-  content: "";
-  width: 20px;
-  height: 1px;
-  background-color: var(--text-color);
-  position: absolute;
-  top: 50%;
-  left: 0;
-}
 
 .projects__title{
   font-size: var(--h3-font-size);
+  color: var(--white-color);
   margin-bottom: .75rem;
 }
 
@@ -596,6 +578,7 @@
   transition: color .4s;
 }
 
+
 .projects__link:hover,
 .projects__link:hover i{
   color: var(--first-color);
@@ -604,6 +587,12 @@
 .projects__card:hover{
   background-color: var(--white-color);
 }
+.projects__card:hover , .projects__title{
+    color: var(--title-color);
+}
+
+
+
 
 /*=============== CONTACT ===============*/
 /* .contact{
@@ -977,25 +966,6 @@
     color: var(--white-color);
   }
 
-  /* .nav__link-button{
-    background-color: var(--black-color);
-    color: var(--white-color);
-    padding: 1.1rem 1.5rem;
-  }
-  .nav__link-button:hover{
-    color: var(--white-color);
-  }
-  .nav__link-button::after{
-    background-color: transparent;
-  } */
-/* 
-  .change-theme{
-    color: var(--text-color);
-  }
-  .change-theme:hover{
-    color: var(--title-color);
-  } */
-
   .home__container{
     grid-template-columns: repeat(2,460px);
     align-items: center;
@@ -1127,11 +1097,18 @@
     width: 100%;
   }
   .projects__container{
-    grid-template-columns: repeat(3,352px);
+    /* grid-template-columns: repeat(3,352px); */
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
     padding-block: 3rem 1rem;
   }
 
+  .projects__title{
+    color: var(--title-color);
+  }
   .projects__card{
+    width: 100%;
     padding: 1.25rem 1.25rem 2.5rem;
   }
 
@@ -1158,6 +1135,9 @@
   order: 1;
   }
 
+  .projects__card:hover , .projects__title{
+    color: var(--title-color);
+}
   .scrollup{
     right: 3rem;
   }
